@@ -2,7 +2,7 @@
 
 由荷兰计算机科学家Edsger Dijkstra构思的Dijkstra算法是一种图搜索算法，它解决了具有非负边缘路径成本的图的单源最短路径问题，产生了最短路径树。该算法常用于路由和 其他图算法中的子程序。
 
-从JS库改成ES Module
+从JS立即执行函数库改成ES Module
 
 感谢  andrewhayward/dijkstra
 
