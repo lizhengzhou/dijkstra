@@ -1,15 +1,21 @@
 /*
 
-"Dijkstra's algorithm, conceived by Dutch computer scientist Edsger Dijkstra, is a graph search algorithm that solves the single-source shortest path problem for a graph with nonnegative edge path costs, producing a shortest path tree. This algorithm is often used in routing and as a subroutine in other graph algorithms."
+由荷兰计算机科学家Edsger Dijkstra构思的Dijkstra算法是一种图搜索算法，它解决了具有非负边缘路径成本的图的单源最短路径问题，产生了最短路径树。该算法常用于路由和 其他图算法中的子程序。
+
+从JS库改成ES Module
+
+感谢  andrewhayward/dijkstra
 
 */
 
-var map = {a:{b:3,c:1},b:{a:2,c:1},c:{a:4,b:1}},
-    graph = new Graph(map);
+import Dijkstra from '../dijkstra/Dijkstra.js';
 
-graph.findShortestPath('a', 'b');      // => ['a', 'c', 'b']
-graph.findShortestPath('a', 'c');      // => ['a', 'c']
-graph.findShortestPath('b', 'a');      // => ['b', 'a']
-graph.findShortestPath('b', 'c', 'b'); // => ['b', 'c', 'b']
-graph.findShortestPath('c', 'a', 'b'); // => ['c', 'b', 'a', 'c', 'b']
-graph.findShortestPath('c', 'b', 'a'); // => ['c', 'b', 'a']
+var map = { svg_1: { svg_2: 3, svg_3: 1 }, svg_2: { svg_1: 2, svg_3: 1 }, svg_3: { svg_1: 4, svg_2: 1 } },
+graph = new Dijkstra(map);
+
+console.log(graph.findShortestPath('svg_1', 'svg_2'));
+console.log(graph.findShortestPath('svg_1', 'svg_3'));
+console.log(graph.findShortestPath('svg_2', 'svg_1'));
+console.log(graph.findShortestPath('svg_2', 'svg_3', 'svg_2'));
+console.log(graph.findShortestPath('svg_3', 'svg_1', 'svg_2'));
+console.log(graph.findShortestPath('svg_3', 'svg_2', 'svg_1'));
