@@ -6,9 +6,11 @@
 
 感谢  andrewhayward/dijkstra
 
+需要部署在Web容器中(IIS)访问
+
 */
 
-import Dijkstra from '../dijkstra/Dijkstra.js';
+import Dijkstra from './Dijkstra.js';
 
 var map = { svg_1: { svg_2: 3, svg_3: 1 }, svg_2: { svg_1: 2, svg_3: 1 }, svg_3: { svg_1: 4, svg_2: 1 } },
 graph = new Dijkstra(map);

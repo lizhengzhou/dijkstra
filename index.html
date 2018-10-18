@@ -6,7 +6,7 @@
 </head>
 <body>
 	<script type="module">
-		import Dijkstra from '../dijkstra/Dijkstra.js';
+		import Dijkstra from './Dijkstra.js';
 
 		var map = { svg_1: { svg_2: 3, svg_3: 1 }, svg_2: { svg_1: 2, svg_3: 1 }, svg_3: { svg_1: 4, svg_2: 1 } },
 			graph = new Dijkstra(map);
@@ -17,7 +17,7 @@
 		console.log(graph.findShortestPath('svg_2', 'svg_3', 'svg_2'));
 		console.log(graph.findShortestPath('svg_3', 'svg_1', 'svg_2'));
 		console.log(graph.findShortestPath('svg_3', 'svg_2', 'svg_1'));
-		
+
 	</script>
 </body>
 </html>
